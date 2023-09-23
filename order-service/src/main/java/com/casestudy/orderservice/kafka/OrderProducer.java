@@ -23,6 +23,7 @@ public class OrderProducer {
     }
 
     public void sendMessage(OrderEvent event){
+    	System.out.println(event.getEmail());
         LOGGER.info("Order event => %models", event.toString());
         Message<OrderEvent> message = MessageBuilder
                 .withPayload(event)

@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ORDER PLACED</title>
+<title>SALE SALE SALE !!!!</title>
 </head>
 
 <body>
@@ -15,17 +15,17 @@
 							style="background-color: #d3be6c; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; padding: 0px 15px 10px 15px;">
 							
 							<div style="font-size: 48px; color:blue;">
-								<b>ORDER PLACED</b>
+								<b>GREAT DIWALI SALE</b>
 							</div>
 							
 							<div style="font-size: 24px; color: #555100;">
-								<br> Your Order is placed successfully!!!  <b>Congrats!!!
+								<br> <b> 30% Discount on Cloths   <b>20% discount on electronic items 
 					                <br>
 							</div>
 							<div>
 								
-								<br>"Please visit again" <br> 
-								<br> <b>${message}</b><br>Order id is: ${orderId}<br>Order is for: ${name}<br>NO of Items purchased: ${quantity}<br>Price is : ${price}
+								<br>Sale is available from 15th October to 1st November <br> 
+								<br> Please visit and avail the offer 
 								<br>
 							</div>
 						</td>

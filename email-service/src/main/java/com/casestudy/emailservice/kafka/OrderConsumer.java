@@ -34,6 +34,8 @@ import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 @Service
 public class OrderConsumer {
+	
+
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderConsumer.class);
 
     @Autowired
@@ -47,8 +49,8 @@ public class OrderConsumer {
 
     @KafkaListener(topics = "${spring.kafka.topic.name}",groupId = "${spring.kafka.consumer.group-id}")
     public  void  consume(OrderEvent event) throws MessagingException{
-//        System.out.println(event);
-        ordermailRepository.save(new Ordermail(event.getEmail(), event.toString(),false));
+    System.out.println(event.getEmail());
+        ordermailRepository.save(new Ordermail(event.getEmail(),event.toString(),false));
 //        for (Ordermail ordermail: ordermailRepository.findOne()){
 //            System.out.println(ordermail);
 //        }
@@ -82,7 +84,7 @@ public class OrderConsumer {
 
     }
 
-    public void simpleEmail(String toEmail,OrderEvent body,String Subject,Map<String,Object> model) throws MessagingException{
+    public void simpleEmail(String strings,OrderEvent body,String Subject,Map<String,Object> model) throws MessagingException{
 
 
     	MimeMessage message = mailSender.createMimeMessage();
@@ -95,7 +97,7 @@ public class OrderConsumer {
         Template t = config.getTemplate("email-template.ftl");
         String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
         helper.setFrom("p87773623@gmail.com");
-        helper.setTo(toEmail);
+        helper.setTo(strings);
         helper.setText(html,true);
         helper.setSubject(Subject);
 
@@ -108,6 +110,8 @@ public class OrderConsumer {
     		System.out.println("Failed");
     	}
 
-    }
+    
+
+}
 }
 

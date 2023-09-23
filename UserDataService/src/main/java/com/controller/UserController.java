@@ -16,8 +16,7 @@ import com.model.User;
 import com.service.UserService;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
-
+@CrossOrigin(origins="*")
 public class UserController {
 
 	@Autowired
